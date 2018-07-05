@@ -150,6 +150,8 @@
 - (UIAlertAction *)getAlertActionEnablePreview {
     UIAlertAction * previewAction = [UIAlertAction actionWithTitle:SLLocalizedString( @"SL_Preview", @"Preview")  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
+        // {
+        // Pavliuk Ievgen
         SuperLoggerPreviewView *pre = [[SuperLoggerPreviewView alloc]init];
         pre.logData = [[SuperLogger sharedInstance] getDataWithFilename:_tempFilename];
         pre.logFilename = _tempFilename;
@@ -157,6 +159,8 @@
             UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:pre];
             [self presentViewController:navController animated:YES completion:nil];
         });
+        //}
+        //
         
     }];
     return previewAction;

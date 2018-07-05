@@ -87,6 +87,8 @@
  */
 -(void)redirectNSLogToDocumentFolder
 {
+    // {
+    // Pavliuk Ievgen
 //    if(isatty(STDOUT_FILENO)) {
 //        return;
 //    }
@@ -95,6 +97,7 @@
 //    if([[device model] hasSuffix:@"Simulator"]){
 //        return;
 //    }
+    //
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     

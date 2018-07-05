@@ -52,6 +52,7 @@ public extension NSNotification.Name {
      */
     public static let willStartDeepSleepMode = Notification.Name("willStartDeepSleepMode")
     
+    // Pavliuk Ievgen
     public static let activityDetected = Notification.Name("activityDetected")
 
     /**
@@ -721,6 +722,9 @@ public extension NSNotification.Name {
         activityManager.startActivityUpdates(to: coreMotionQueue) { activity in
             if let activity = activity {
                 self.coreMotionPermission = true
+                
+                // {
+                // Pavliuk Ievgen
                 if activity.automotive {
                     NSLog("activity automotive")
                 } else if activity.walking {
@@ -737,6 +741,7 @@ public extension NSNotification.Name {
                     let note = Notification(name: .activityDetected, object: self, userInfo: ["activity" : activity])
                     NotificationCenter.default.post(note)
                 }
+                // }
                 
                 ActivityBrain.highlander.add(cmMotionActivity: activity)
             }
