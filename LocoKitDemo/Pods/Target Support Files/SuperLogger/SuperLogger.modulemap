@@ -1,0 +1,6 @@
+framework module SuperLogger {
+  umbrella header "SuperLogger-umbrella.h"
+
+  export *
+  module * { export * }
+}

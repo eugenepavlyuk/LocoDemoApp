@@ -1,0 +1,6 @@
+framework module SwiftNotes {
+  umbrella header "SwiftNotes-umbrella.h"
+
+  export *
+  module * { export * }
+}

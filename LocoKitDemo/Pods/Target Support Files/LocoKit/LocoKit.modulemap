@@ -1,0 +1,6 @@
+framework module LocoKit {
+  umbrella header "LocoKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
