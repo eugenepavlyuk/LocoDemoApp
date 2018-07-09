@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B027001FCCA68496FE171E37441C2DAD"
+               BlueprintIdentifier = "4B1446FCFCAD933D9E7DAEF187ACD85C"
                BlueprintName = "SuperLogger"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "SuperLogger.framework">

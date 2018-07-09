@@ -16,6 +16,7 @@
 @property(strong, nonatomic) NSString *mailTitle;
 @property(strong, nonatomic) NSString *mailContect;
 @property(strong, nonatomic) NSArray *mailRecipients;
+@property(strong, nonatomic) NSString *logDirectory;
 @property(assign,nonatomic) BOOL enableStar;
 @property(assign,nonatomic) BOOL enablePreview;
 @property(assign,nonatomic) BOOL enableMail;

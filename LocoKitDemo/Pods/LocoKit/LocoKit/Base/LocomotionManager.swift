@@ -117,7 +117,7 @@ public extension NSNotification.Name {
    
     // internal settings
     internal static let fallbackUpdateCycle: TimeInterval = 30
-    internal static let maximumDesiredAccuracyIncreaseFrequency: TimeInterval = 60
+    internal static let maximumDesiredAccuracyIncreaseFrequency: TimeInterval = 5 * 60
     internal static let maximumDesiredAccuracyDecreaseFrequency: TimeInterval = 60 * 2
     internal static let maximumDesiredLocationAccuracyInVisit = kCLLocationAccuracyHundredMeters
     internal static let wiggleHz: Double = 4
@@ -381,6 +381,8 @@ public extension NSNotification.Name {
         locationManager.desiredAccuracy = maximumDesiredLocationAccuracy
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.startUpdatingLocation()
+        // Pavliuk Ievgen
+        locationManager.startMonitoringSignificantLocationChanges()
 
         // start the motion gimps
         startCoreMotion()
@@ -725,18 +727,6 @@ public extension NSNotification.Name {
                 
                 // {
                 // Pavliuk Ievgen
-                if activity.automotive {
-                    NSLog("activity automotive")
-                } else if activity.walking {
-                    NSLog("activity walking")
-                } else if activity.running {
-                    NSLog("activity running")
-                } else if activity.cycling {
-                    NSLog("activity cycling")
-                } else if activity.stationary {
-                    NSLog("activity stationary")
-                }
-                
                 onMain {
                     let note = Notification(name: .activityDetected, object: self, userInfo: ["activity" : activity])
                     NotificationCenter.default.post(note)

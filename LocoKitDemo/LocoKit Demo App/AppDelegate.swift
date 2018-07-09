@@ -29,6 +29,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         superLogger?.mailTitle = "LocoKit Demo App"
         superLogger?.mailContect = "LogFile"
         
+        if (launchOptions?[.location] != nil) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                let navigationController = self.window?.rootViewController as? UINavigationController
+                guard let controller = navigationController?.viewControllers[0] as? ViewController else { return }
+                controller.tappedStart()
+            }
+        }
+        
         return true
     }
 
@@ -38,7 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        guard let controller = window?.rootViewController as? ViewController else { return }
+        let navigationController = window?.rootViewController as? UINavigationController
+        guard let controller = navigationController?.viewControllers[0] as? ViewController else { return }
         
         // update the UI on appear
         controller.update()

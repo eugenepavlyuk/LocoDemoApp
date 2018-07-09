@@ -15,7 +15,6 @@
 @interface SuperLogger()
 @property(strong, nonatomic) NSUserDefaults *userDefaults;
 @property(strong, nonatomic) NSMutableArray *starList;
-@property(strong, nonatomic) NSString *logDirectory;
 @property(strong, nonatomic) NSString *logFilename;
 @property(strong, nonatomic) NSString *logFileFormat;
 @end

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "564F6D19A0ECCEFEC4ACA9AB5DB568F4"
-               BlueprintName = "SwiftNotes"
+               BlueprintIdentifier = "CF1A8F7CE83CF7A69F1C7C50E3EE5403"
+               BlueprintName = "Zip"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SwiftNotes.framework">
+               BuildableName = "Zip.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
